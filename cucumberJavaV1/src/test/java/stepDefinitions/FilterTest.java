@@ -3,6 +3,7 @@ package stepDefinitions;
 import java.time.Duration;
 import java.util.List;
 
+import org.junit.Assert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Keys;
@@ -12,17 +13,16 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
+import Utilities.Utility;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 
-public class FilterTest {
+public class FilterTest extends Utility{
 
 	WebDriver driver;
-	public String baseUrl = "https://demo.aspnetawesome.com/";
-	public String name = "Jennifer";
-
+	
 	@Given("browser is open")
 	public void open_the_browser() {
 		System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir") + "//driver//chromedriver.exe");
@@ -51,29 +51,35 @@ public class FilterTest {
 	   
 	   Thread.sleep(2000);
 	   WebElement foodCol = wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("GridFrow2fltFood-awed")));
-			
 	   foodCol.click();
-	   //System.out.println(driver.findElement(By.xpath("//*[@id='GridFrow2fltFood-dropmenu']/div[2]/ul")).getText());
-	   Thread.sleep(2000);
 	   List<WebElement> foods = driver.findElements(By.xpath("//*[@id='GridFrow2fltFood-dropmenu']/div[2]/ul/li/div"));
 	   for (WebElement option : foods) {
-		   //System.out.println(option.getText());
-			if(option.getText().equalsIgnoreCase("French toast")) {
+		   
+			if(option.getText().equalsIgnoreCase(food)) {
+				foodSelect = option.getText();
 				option.click();
+				break;
+			}
+			
+		}
+	   
+	   driver.findElement(By.id("GridFrow2fltDate-awed")).click();
+	   List<WebElement> foodYear = driver.findElements(By.xpath("//*[@id='GridFrow2fltDate-dropmenu']/div[2]/ul/li[2]"));
+	   
+	   for (WebElement yrOption : foodYear) {
+		   
+			if(yrOption.getText().equalsIgnoreCase(year)) {
+				yearFood = yrOption.getText();
+				yrOption.click();
+				break;
 			}
 		}
-	   //WebElement frenchToast = driver.findElement(By.xpath("//*[@id='GridFrow2fltFood-dropmenu']/div[2]/ul/li[3]"));
-	   //frenchToast.click();
-	   
-	   Thread.sleep(2000);
-	   driver.findElement(By.id("GridFrow2fltDate-awed")).click();
-	   driver.findElement(By.xpath("//*[@id='GridFrow2fltDate-dropmenu']/div[2]/ul/li[2]")).click();
-	   Thread.sleep(3000);
 	}
 
 	@Then("the product mapped on the user should be displayed")
 	public void the_product_mapped_on_the_user_should_be_displayed() {
-
+		Assert.assertEquals(food,foodSelect);
+		Assert.assertEquals(year,yearFood);
 		driver.quit();
 	}
 

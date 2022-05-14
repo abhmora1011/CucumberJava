@@ -1,0 +1,10 @@
+package Utilities;
+
+public class Utility {
+	String baseUrl = "https://demo.aspnetawesome.com/";
+	String name = "Jennifer";
+	String food = "French toast";
+	String foodSelect = "";
+	String year = "2009";
+	String yearFood = "";
+}
