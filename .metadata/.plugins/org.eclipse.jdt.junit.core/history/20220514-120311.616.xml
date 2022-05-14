@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?><testrun name="TestRunner" project="cucumberJavaV1" tests="1" started="1" failures="0" errors="0" ignored="0">
-  <testsuite name="testRunner.TestRunner" time="13.473">
-    <testsuite name="Filter Search" time="13.473">
-      <testcase name="Search row" classname="Filter Search" time="13.473"/>
-    </testsuite>
-  </testsuite>
-</testrun>

@@ -25,15 +25,13 @@
 	</section>
 	<section name="Maven2ProjectWizardArchifactPage">
 		<list key="package">
-			<item value="cucumberProjectv1.cucumberProjectv1"/>
-			<item value="cucumberProjectv1.cucumberProject"/>
+			<item value="cucumberJavaV1.cucumberJavaV1"/>
 		</list>
 		<list key="groupId">
-			<item value="cucumberProjectv1"/>
+			<item value="cucumberJavaV1"/>
 		</list>
 		<list key="artifactId">
-			<item value="cucumberProjectv1"/>
-			<item value="cucumberProject"/>
+			<item value="cucumberJavaV1"/>
 		</list>
 		<list key="projectNameTemplate">
 			<item value="[artifactId]"/>

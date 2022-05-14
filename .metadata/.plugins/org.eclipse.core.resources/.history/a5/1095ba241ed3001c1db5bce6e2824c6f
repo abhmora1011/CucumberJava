@@ -1,7 +1,0 @@
-package testRunner;
-
-@RunWith(Cucumber.class)
-
-public class FilterTestRunner {
-
-}
