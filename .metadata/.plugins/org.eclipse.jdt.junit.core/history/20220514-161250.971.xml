@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="TestRunner" project="cucumberJavaV1" tests="1" started="1" failures="0" errors="1" ignored="0">
+  <testsuite name="testRunner.TestRunner" time="13.61">
+    <testsuite name="Filter Search" time="13.61">
+      <testcase name="Search row" classname="Filter Search" time="13.61">
+        <error>org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element &lt;button type="button" class="o-ddbtn o-btn awe-btn" id="GridFrow2fltDate-awed" aria-label="open"&gt;...&lt;/button&gt; is not clickable at point (763, 23). Other element would receive the click: &lt;button type="button" class="awe-btn o-favb o-btn "&gt;...&lt;/button&gt;
+  (Session info: chrome=101.0.4951.64)
+Build info: version: '4.1.4', revision: '535d840ee2'
+System info: host: 'DESKTOP-5SRPD8A', ip: '192.168.254.171', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_202'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [6ff72921e38d32bbb454ed5cc000511d, clickElement {id=a224a8cd-e3e1-4c6e-befc-479aa952034c}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 101.0.4951.64, chrome: {chromedriverVersion: 101.0.4951.41 (93c720db8323..., userDataDir: C:\Users\ABRAHA~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:57998}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:57998/devtoo..., se:cdpVersion: 101.0.4951.64, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on WINDOWS (6ff72921e38d32bbb454ed5cc000511d)] -&gt; id: GridFrow2fltDate-awed]
+Session ID: 6ff72921e38d32bbb454ed5cc000511d&#13;
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)&#13;
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)&#13;
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)&#13;
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)&#13;
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)&#13;
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)&#13;
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)&#13;
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)&#13;
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)&#13;
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)&#13;
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:567)&#13;
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:251)&#13;
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:77)&#13;
+	at stepDefinitions.FilterTest.input_person_name_on_the_field(FilterTest.java:67)&#13;
+	at ✽.input person name on the field(file:///C:/Users/Abraham%20Ora/Desktop/CucumberJava/cucumberJavaV1/src/test/java/Features/filter.feature:7)&#13;
+&#13;
+</error>
+      </testcase>
+    </testsuite>
+  </testsuite>
+</testrun>
