@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="TestRunner" project="cucumberJavaV1" tests="1" started="1" failures="0" errors="1" ignored="0">
+  <testsuite name="testRunner.TestRunner" time="0.0">
+    <testsuite name="Filter Search" time="0.0">
+      <testcase name="Search row" classname="Filter Search" time="0.0">
+        <error>io.cucumber.junit.UndefinedStepException: The step 'User is already on the site' is undefined.
+You can implement this step using the snippet(s) below:
+
+@Given("User is already on the site")
+public void user_is_already_on_the_site() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+&#13;
+&#13;
+</error>
+      </testcase>
+    </testsuite>
+  </testsuite>
+</testrun>

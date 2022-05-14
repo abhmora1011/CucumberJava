@@ -1,0 +1,17 @@
+@SmokeScenario
+Feature: Filter Search
+
+#	@SmokeTest
+  #Scenario: Search row
+    #Given User is already on the site
+    #When User scroll on the filter table and input a person name
+    #Then Product mapped on the user should be displayed
+
+  Scenario: Search row
+    Given User is already on the site
+    When User scroll on the filter table and input <person>
+    Then Product mapped on the user should be displayed
+    
+	Examples: 
+	  |person|
+	  |abe|

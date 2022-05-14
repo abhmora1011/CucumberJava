@@ -1,0 +1,15 @@
+package testRunner;
+
+import org.junit.runner.RunWith;
+
+import io.cucumber.junit.platform.engine.CucumberOption;
+
+@RunWith(Cucumber.class)
+@CucumberOption(
+		{feature = {"src\\test\\java\\appFeatures"},
+		glue = {"stepDefinitions"}
+		)
+
+public class FilterTestRunner {
+
+}

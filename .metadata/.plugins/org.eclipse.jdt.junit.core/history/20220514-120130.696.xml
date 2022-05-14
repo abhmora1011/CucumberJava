@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="TestRunner" project="cucumberJavaV1" tests="1" started="1" failures="0" errors="1" ignored="0">
+  <testsuite name="testRunner.TestRunner" time="8.92">
+    <testsuite name="Filter Search" time="8.92">
+      <testcase name="Search row" classname="Filter Search" time="8.92">
+        <error>java.lang.Error: Unresolved compilation problem: 
+	dropdown cannot be resolved
+&#13;
+	at stepDefinitions.FilterTest.input_person_name_on_the_field(FilterTest.java:54)&#13;
+	at ✽.input person name on the field(file:///C:/Users/Abraham%20Ora/Desktop/CucumberJava/cucumberJavaV1/src/test/java/Features/filter.feature:9)&#13;
+&#13;
+</error>
+      </testcase>
+    </testsuite>
+  </testsuite>
+</testrun>

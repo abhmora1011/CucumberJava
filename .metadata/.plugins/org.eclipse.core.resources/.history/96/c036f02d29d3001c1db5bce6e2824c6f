@@ -1,0 +1,5 @@
+Feature: Filter Search
+
+Given User is already on the site
+When User scroll on the filter table and input a person name
+Then Product mapped on the user should be displayed

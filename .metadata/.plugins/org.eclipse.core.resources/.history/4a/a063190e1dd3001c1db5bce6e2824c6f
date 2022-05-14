@@ -1,0 +1,12 @@
+package filterImplementation;
+
+public class Product {
+
+	private String product;
+	int price;
+	
+	public Product() {
+		
+	}
+	
+}
