@@ -12,7 +12,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 import testdata.TestData;
 
-public class HomePage extends TestData{
+public class HomePage extends TestDataa{
 	
 	WebDriver driver;
 	
@@ -42,13 +42,12 @@ public class HomePage extends TestData{
 //		dateFilter.click();
 		
 		WebElement dateFilter = explicitWait(drop_dateFilter);
-		dateFilter.click();
 
-		List<WebElement> foodYear = driver.findElements(drop_ListOfYear);
+		List<WebElement> foodYear = driver.findElements(By.xpath("//*[@id='GridFrow2fltDate-dropmenu']/div[2]/ul/li"));
 
 		for (WebElement yrOption : foodYear) {
-			System.out.println("----" + yrOption.getText());
-			if (yrOption.getText().equalsIgnoreCase(year)) {
+
+			if (yrOption.getText().equalsIgnoreCase(setYear)) {
 				selectedYear = yrOption.getText();
 				yrOption.click();
 				break;

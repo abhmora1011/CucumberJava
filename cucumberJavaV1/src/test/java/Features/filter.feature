@@ -9,4 +9,4 @@ Feature: Filter Search
 
     Examples: 
       | name     | year | food  |
-      | Jennifer | 2013 | Salad |
+      | Jennifer | 2013 | Apple Pie |

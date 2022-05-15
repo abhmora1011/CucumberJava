@@ -1,7 +1,6 @@
 package pages;
 
 import java.time.Duration;
-import java.util.List;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
@@ -10,9 +9,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-import testdata.TestData;
-
-public class HomePage extends TestData{
+public class HomePage {
 	
 	WebDriver driver;
 	
@@ -37,24 +34,7 @@ public class HomePage extends TestData{
 	}
 	
 	public void selectYear(String year) {
-//		WebElement dateFilter = wait
-//				.until(ExpectedConditions.visibilityOfElementLocated(By.id("GridFrow2fltDate-awed")));
-//		dateFilter.click();
 		
-		WebElement dateFilter = explicitWait(drop_dateFilter);
-		dateFilter.click();
-
-		List<WebElement> foodYear = driver.findElements(drop_ListOfYear);
-
-		for (WebElement yrOption : foodYear) {
-			System.out.println("----" + yrOption.getText());
-			if (yrOption.getText().equalsIgnoreCase(year)) {
-				selectedYear = yrOption.getText();
-				yrOption.click();
-				break;
-			}
-		}
-
 	}
 	
 	public WebElement explicitWait(By element) {

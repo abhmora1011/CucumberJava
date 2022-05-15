@@ -76,8 +76,6 @@ public class FilterTest extends TestData {
 //				break;
 //			}
 //		}
-		
-		hm.selectYear(year);
 
 		Thread.sleep(2000);
 

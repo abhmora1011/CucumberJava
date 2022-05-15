@@ -47,8 +47,8 @@ public class HomePage extends TestData{
 		List<WebElement> foodYear = driver.findElements(drop_ListOfYear);
 
 		for (WebElement yrOption : foodYear) {
-			System.out.println("----" + yrOption.getText());
-			if (yrOption.getText().equalsIgnoreCase(year)) {
+			System.out.println(yrOption.getText());
+			if (yrOption.getText().equalsIgnoreCase(setYear)) {
 				selectedYear = yrOption.getText();
 				yrOption.click();
 				break;

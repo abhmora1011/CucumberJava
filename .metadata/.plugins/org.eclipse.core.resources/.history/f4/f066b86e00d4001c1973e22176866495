@@ -48,7 +48,7 @@ public class HomePage extends TestData{
 
 		for (WebElement yrOption : foodYear) {
 			System.out.println("----" + yrOption.getText());
-			if (yrOption.getText().equalsIgnoreCase(year)) {
+			if (yrOption.getText().equalsIgnoreCase(setYear)) {
 				selectedYear = yrOption.getText();
 				yrOption.click();
 				break;

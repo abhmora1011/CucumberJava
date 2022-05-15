@@ -44,11 +44,11 @@ public class HomePage extends TestData{
 		WebElement dateFilter = explicitWait(drop_dateFilter);
 		dateFilter.click();
 
-		List<WebElement> foodYear = driver.findElements(drop_ListOfYear);
+		List<WebElement> foodYear = driver.findElements(drop_ListOfYear)
 
 		for (WebElement yrOption : foodYear) {
-			System.out.println("----" + yrOption.getText());
-			if (yrOption.getText().equalsIgnoreCase(year)) {
+			System.out.println("----");
+			if (yrOption.getText().equalsIgnoreCase(setYear)) {
 				selectedYear = yrOption.getText();
 				yrOption.click();
 				break;

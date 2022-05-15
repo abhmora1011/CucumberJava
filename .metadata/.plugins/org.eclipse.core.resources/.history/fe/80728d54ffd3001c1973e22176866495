@@ -62,22 +62,20 @@ public class FilterTest extends TestData {
 
 		Thread.sleep(2000);
 
-//		WebElement dateFilter = wait
-//				.until(ExpectedConditions.visibilityOfElementLocated(By.id("GridFrow2fltDate-awed")));
-//		dateFilter.click();
-//
-//		List<WebElement> foodYear = driver.findElements(By.xpath("//*[@id='GridFrow2fltDate-dropmenu']/div[2]/ul/li"));
-//
-//		for (WebElement yrOption : foodYear) {
-//
-//			if (yrOption.getText().equalsIgnoreCase(setYear)) {
-//				selectedYear = yrOption.getText();
-//				yrOption.click();
-//				break;
-//			}
-//		}
-		
-		hm.selectYear(year);
+		WebElement dateFilter = wait
+				.until(ExpectedConditions.visibilityOfElementLocated(By.id("GridFrow2fltDate-awed")));
+		dateFilter.click();
+
+		List<WebElement> foodYear = driver.findElements(By.xpath("//*[@id='GridFrow2fltDate-dropmenu']/div[2]/ul/li"));
+
+		for (WebElement yrOption : foodYear) {
+
+			if (yrOption.getText().equalsIgnoreCase(setYear)) {
+				selectedYear = yrOption.getText();
+				yrOption.click();
+				break;
+			}
+		}
 
 		Thread.sleep(2000);
 

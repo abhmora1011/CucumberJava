@@ -1,7 +1,6 @@
 package pages;
 
 import java.time.Duration;
-import java.util.List;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
@@ -10,9 +9,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-import testdata.TestData;
-
-public class HomePage extends TestData{
+public class HomePage {
 	
 	WebDriver driver;
 	
@@ -27,35 +24,12 @@ public class HomePage extends TestData{
 	By drop_ListOfFood = By.xpath("//*[@id='GridFrow2fltFood-dropmenu']/div[2]/ul/li/div"); 
 	
 	public void enterName(String name) {
-//		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
-//		WebElement personCol = wait
-//				.until(ExpectedConditions.visibilityOfElementLocated(this.txt_PersonCol));
-		
 		WebElement personCol = explicitWait(txt_PersonCol);
 		personCol.sendKeys(name);
 		personCol.sendKeys(Keys.ENTER);
 	}
 	
-	public void selectYear(String year) {
-//		WebElement dateFilter = wait
-//				.until(ExpectedConditions.visibilityOfElementLocated(By.id("GridFrow2fltDate-awed")));
-//		dateFilter.click();
-		
-		WebElement dateFilter = explicitWait(drop_dateFilter);
-		dateFilter.click();
-
-		List<WebElement> foodYear = driver.findElements(drop_ListOfYear);
-
-		for (WebElement yrOption : foodYear) {
-			System.out.println("----" + yrOption.getText());
-			if (yrOption.getText().equalsIgnoreCase(year)) {
-				selectedYear = yrOption.getText();
-				yrOption.click();
-				break;
-			}
-		}
-
-	}
+	
 	
 	public WebElement explicitWait(By element) {
 	    WebDriverWait w = new WebDriverWait(driver, Duration.ofSeconds(10));
