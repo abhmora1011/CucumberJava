@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="TestRunner" project="cucumberJavaV1" tests="1" started="1" failures="0" errors="1" ignored="0">
+  <testsuite name="testRunner.TestRunner" time="11.803">
+    <testsuite name="Filter Search" time="11.803">
+      <testcase name="Search row" classname="Filter Search" time="11.803">
+        <error>java.lang.NullPointerException&#13;
+	at pages.HomePage.scrollPageByValue(HomePage.java:92)&#13;
+	at stepDefinitions.FilterTest.user_is_on_the_page_and_scroll_on_the_table(FilterTest.java:37)&#13;
+	at ✽.user is on the page and scroll on the table(file:///C:/Users/Abraham%20Ora/Desktop/CucumberJava/cucumberJavaV1/src/test/java/Features/filter.feature:6)&#13;
+&#13;
+</error>
+      </testcase>
+    </testsuite>
+  </testsuite>
+</testrun>

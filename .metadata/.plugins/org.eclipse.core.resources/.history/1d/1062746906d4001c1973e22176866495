@@ -1,0 +1,26 @@
+package pages;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+import testdata.TestData;
+
+public class BaseClass extends TestData{
+
+	WebDriver driver;
+	
+	public BaseClass(WebDriver driver) {
+		this.driver = driver;
+	}
+	
+	public void setUp() {
+		System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir") + "//driver//chromedriver.exe");
+		driver = new ChromeDriver();
+		driver.manage().window().maximize();
+	}
+	
+	public void tearDown() {
+		driver.quit();
+	}
+	
+}

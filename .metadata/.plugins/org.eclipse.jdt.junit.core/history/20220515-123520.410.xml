@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="TestRunner" project="cucumberJavaV1" tests="1" started="1" failures="0" errors="1" ignored="0">
+  <testsuite name="testRunner.TestRunner" time="2.247">
+    <testsuite name="Filter Search" time="2.247">
+      <testcase name="Search row" classname="Filter Search" time="2.247">
+        <error>java.lang.NullPointerException&#13;
+	at pages.HomePage.launchBrowser(HomePage.java:101)&#13;
+	at stepDefinitions.FilterTest.user_input_the_url(FilterTest.java:24)&#13;
+	at ✽.user input the url(file:///C:/Users/Abraham%20Ora/Desktop/CucumberJava/cucumberJavaV1/src/test/java/Features/filter.feature:5)&#13;
+&#13;
+</error>
+      </testcase>
+    </testsuite>
+  </testsuite>
+</testrun>

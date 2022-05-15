@@ -1,0 +1,10 @@
+package pages;
+
+
+import testdata.TestData;
+
+public class BaseClass extends TestData{
+
+	
+	
+}

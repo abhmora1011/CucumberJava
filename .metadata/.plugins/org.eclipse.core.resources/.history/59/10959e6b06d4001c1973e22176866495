@@ -1,0 +1,17 @@
+package pages;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+import testdata.TestData;
+
+public class BaseClass extends TestData{
+
+	WebDriver driver;
+	
+	public BaseClass(WebDriver driver) {
+		this.driver = driver;
+	}
+	
+	
+}

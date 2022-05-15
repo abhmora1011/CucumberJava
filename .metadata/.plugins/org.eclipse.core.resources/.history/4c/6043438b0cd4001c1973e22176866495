@@ -1,0 +1,58 @@
+package stepDefinitions;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+import io.cucumber.java.en.And;
+import io.cucumber.java.en.Given;
+import io.cucumber.java.en.Then;
+import io.cucumber.java.en.When;
+import pages.HomePage;
+
+
+public class FilterTest {
+
+	WebDriver driver;
+	HomePage hm;
+
+	@Given("browser is open")
+	public void open_the_browser() {
+		System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir") + "//driver//chromedriver.exe");
+		driver = new ChromeDriver();
+		driver.manage().window().maximize();
+	}
+
+	@And("user input the url")
+	public void user_input_the_url() {
+		hm = new HomePage(driver);
+		hm.launchBrowser(hm.baseUrl);
+	}
+
+	@When("user is on the page and scroll on the table")
+	public void user_is_on_the_page_and_scroll_on_the_table() throws InterruptedException {
+		hm = new HomePage(driver);
+		hm.scrollPageByValue(0, 2000);
+		hm.pause(2000);
+	}
+
+	@And("^filter a record using (.*), (.*) and (.*)$")
+	public void filter_record(String name, String year, String food) throws InterruptedException {
+
+		hm = new HomePage(driver);
+		hm.enterName(name);
+		hm.pause(2000);
+		hm.selectYear(year);
+		hm.pause(2000);
+		hm.selectFood(food);
+	}
+
+	@Then("the product mapped on the users input should be displayed")
+	public void the_product_mapped_on_the_user_should_be_displayed() {
+
+		hm = new HomePage(driver);
+		hm.assertValue(hm.setFood, hm.selectedFood);
+		hm.assertValue(hm.setYear, hm.selectedYear);
+		hm.tearDown();
+	}
+
+}
