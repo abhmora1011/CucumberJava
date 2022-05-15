@@ -45,6 +45,9 @@ public class FilterTest extends TestData {
 
 	@And("^filter a record using (.*), (.*) and (.*)$")
 	public void filter_record(String name, String year, String food) throws InterruptedException {
+
+		setYear = year;
+		setFood = food;
 		
 		HomePage hm = new HomePage(driver);
 
@@ -77,8 +80,6 @@ public class FilterTest extends TestData {
 		hm.selectYear(year);
 
 		Thread.sleep(2000);
-		
-		hm.selectFood(food);
 
 //		WebElement foodCol = wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("GridFrow2fltFood-awed")));
 //		foodCol.click();

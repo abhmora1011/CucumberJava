@@ -57,25 +57,6 @@ public class HomePage extends TestData{
 
 	}
 	
-	public void selectFood(String food) {
-//		WebElement foodCol = wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("GridFrow2fltFood-awed")));
-//		foodCol.click();
-
-		WebElement foodCol = explicitWait(drop_foodFilter);
-		foodCol.click();
-		
-		List<WebElement> foods = driver.findElements(drop_ListOfFood);
-		
-		for (WebElement option : foods) {
-			System.out.println("----" + option.getText());
-			if (option.getText().equalsIgnoreCase(food)) {
-				selectedFood = option.getText();
-				option.click();
-				break;
-			}
-		}
-	}
-	
 	public WebElement explicitWait(By element) {
 	    WebDriverWait w = new WebDriverWait(driver, Duration.ofSeconds(10));
 	    return w.until(ExpectedConditions.visibilityOfElementLocated(element));

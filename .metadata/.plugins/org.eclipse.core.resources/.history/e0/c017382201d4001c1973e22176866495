@@ -45,6 +45,9 @@ public class FilterTest extends TestData {
 
 	@And("^filter a record using (.*), (.*) and (.*)$")
 	public void filter_record(String name, String year, String food) throws InterruptedException {
+
+		setYear = year;
+		setFood = food;
 		
 		HomePage hm = new HomePage(driver);
 
@@ -77,21 +80,19 @@ public class FilterTest extends TestData {
 		hm.selectYear(year);
 
 		Thread.sleep(2000);
-		
-		hm.selectFood(food);
 
-//		WebElement foodCol = wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("GridFrow2fltFood-awed")));
-//		foodCol.click();
-//
-//		List<WebElement> foods = driver.findElements(By.xpath("//*[@id='GridFrow2fltFood-dropmenu']/div[2]/ul/li/div"));
-//		for (WebElement option : foods) {
-//
-//			if (option.getText().equalsIgnoreCase(food)) {
-//				selectedFood = option.getText();
-//				option.click();
-//				break;
-//			}
-//		}
+		WebElement foodCol = wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("GridFrow2fltFood-awed")));
+		foodCol.click();
+
+		List<WebElement> foods = driver.findElements(By.xpath("//*[@id='GridFrow2fltFood-dropmenu']/div[2]/ul/li/div"));
+		for (WebElement option : foods) {
+
+			if (option.getText().equalsIgnoreCase(food)) {
+				selectedFood = option.getText();
+				option.click();
+				break;
+			}
+		}
 
 	}
 

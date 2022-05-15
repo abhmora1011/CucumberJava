@@ -65,7 +65,6 @@ public class HomePage extends TestData{
 		foodCol.click();
 		
 		List<WebElement> foods = driver.findElements(drop_ListOfFood);
-		
 		for (WebElement option : foods) {
 			System.out.println("----" + option.getText());
 			if (option.getText().equalsIgnoreCase(food)) {

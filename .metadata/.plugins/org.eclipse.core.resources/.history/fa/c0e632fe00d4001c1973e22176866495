@@ -64,10 +64,9 @@ public class HomePage extends TestData{
 		WebElement foodCol = explicitWait(drop_foodFilter);
 		foodCol.click();
 		
-		List<WebElement> foods = driver.findElements(drop_ListOfFood);
-		
+		List<WebElement> foods = driver.findElements(By.xpath("//*[@id='GridFrow2fltFood-dropmenu']/div[2]/ul/li/div"));
 		for (WebElement option : foods) {
-			System.out.println("----" + option.getText());
+
 			if (option.getText().equalsIgnoreCase(food)) {
 				selectedFood = option.getText();
 				option.click();

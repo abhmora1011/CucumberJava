@@ -78,7 +78,7 @@ public class FilterTest extends TestData {
 
 		Thread.sleep(2000);
 		
-		hm.selectFood(food);
+		hm.selectedFood(food);
 
 //		WebElement foodCol = wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("GridFrow2fltFood-awed")));
 //		foodCol.click();
