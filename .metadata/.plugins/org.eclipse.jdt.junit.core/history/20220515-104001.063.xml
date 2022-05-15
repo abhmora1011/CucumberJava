@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="TestRunner" project="cucumberJavaV1" tests="2" started="2" failures="1" errors="0" ignored="0">
+  <testsuite name="testRunner.TestRunner" time="27.401">
+    <testsuite name="Filter Search" time="27.4">
+      <testcase name="Search row #1" classname="Filter Search" time="14.977"/>
+      <testcase name="Search row #2" classname="Filter Search" time="12.423">
+        <failure>java.lang.AssertionError: expected:&lt;Oat meal&gt; but was:&lt;null&gt;&#13;
+	at org.junit.Assert.fail(Assert.java:89)&#13;
+	at org.junit.Assert.failNotEquals(Assert.java:835)&#13;
+	at org.junit.Assert.assertEquals(Assert.java:120)&#13;
+	at org.junit.Assert.assertEquals(Assert.java:146)&#13;
+	at stepDefinitions.FilterTest.the_product_mapped_on_the_user_should_be_displayed(FilterTest.java:94)&#13;
+	at ✽.the product mapped on the users input should be displayed(file:///C:/Users/Abraham%20Ora/Desktop/CucumberJava/cucumberJavaV1/src/test/java/Features/filter.feature:8)&#13;
+&#13;
+</failure>
+      </testcase>
+    </testsuite>
+  </testsuite>
+</testrun>

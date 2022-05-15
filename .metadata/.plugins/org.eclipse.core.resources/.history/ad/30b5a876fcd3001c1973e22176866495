@@ -1,0 +1,36 @@
+package pages;
+
+import java.time.Duration;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
+
+public class HomePage {
+	
+	WebDriver driver;
+	
+	By txt_PersonCol = By.id("GridFrow2fltPerson-awed");
+	By drop_dateFilter = By.id("GridFrow2fltDate-awed");
+	By drop_ListOfYear = By.xpath("//*[@id='GridFrow2fltDate-dropmenu']/div[2]/ul/li");
+	By drop_foodFilter = By.id("GridFrow2fltFood-awed");
+	By drop_ListOfFood = By.xpath("//*[@id='GridFrow2fltFood-dropmenu']/div[2]/ul/li/div"); 
+	
+	public void enterName(String name) {
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+		WebElement personCol = wait
+				.until(ExpectedConditions.visibilityOfElementLocated(this.txt_PersonCol));
+
+		personCol.sendKeys(name);
+		personCol.sendKeys(Keys.ENTER);
+	}
+	
+	public WebElement explicitWait() {
+	    WebDriverWait w = new WebDriverWait(driver, Duration.ofSeconds(10));
+	    return w.until(ExpectedConditions.visibilityOfElementLocated(this.txt_PersonCol));
+	}
+	
+}

@@ -17,6 +17,7 @@ import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
+import pages.HomePage;
 import testdata.TestData;
 
 public class FilterTest extends TestData {
@@ -47,13 +48,17 @@ public class FilterTest extends TestData {
 
 		setYear = year;
 		setFood = food;
+		
+		HomePage hm = new HomePage(driver);
 
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
-		WebElement personCol = wait
-				.until(ExpectedConditions.visibilityOfElementLocated(By.id("GridFrow2fltPerson-awed")));
-
-		personCol.sendKeys(name);
-		personCol.sendKeys(Keys.ENTER);
+//		WebElement personCol = wait
+//				.until(ExpectedConditions.visibilityOfElementLocated(By.id("GridFrow2fltPerson-awed")));
+//
+//		personCol.sendKeys(name);
+//		personCol.sendKeys(Keys.ENTER);
+		
+		hm.enterName(name);
 
 		Thread.sleep(2000);
 
@@ -89,11 +94,11 @@ public class FilterTest extends TestData {
 
 	}
 
-	@Then("the product mapped on the user should be displayed")
+	@Then("the product mapped on the users input should be displayed")
 	public void the_product_mapped_on_the_user_should_be_displayed() {
 		Assert.assertEquals(setFood, selectedFood);
 		Assert.assertEquals(setYear, selectedYear);
-		driver.quit();
+		//driver.quit();
 	}
 
 }

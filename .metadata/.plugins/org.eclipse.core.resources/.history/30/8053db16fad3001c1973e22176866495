@@ -1,0 +1,8 @@
+package pages;
+
+import org.openqa.selenium.By;
+
+public class HomePage {
+	By txt_PersonCol = By.id("GridFrow2fltPerson-awed");
+	By drop_dateFilter = By.id("GridFrow2fltDate-awed");
+}
