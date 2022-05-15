@@ -42,68 +42,10 @@ $(document).ready(function() {
 
 
   
-<title>Cucumber-JVM Reports  - Tags Overview</title>
+<title>Cucumber-JVM Reports  - Failures Overview</title>
 
-
-  <script type="text/javascript">
-  $(document).ready(function() {
-
-    var chartData = {
-        labels: [],
-        datasets: [
-            {
-                label: 'Passed',
-                backgroundColor: "#92DD96",
-                data: []
-            },
-            {
-                label: 'Failed',
-                backgroundColor: "#F2928C",
-                data: []
-            },
-            {
-                label: 'Skipped',
-                backgroundColor: "#8AF",
-                data: []
-            },
-            {
-                label: 'Pending',
-                backgroundColor: "#F5F28F",
-                data: []
-            },
-            {
-                label: 'Undefined',
-                backgroundColor: "#F5B975",
-                data: []
-            }
-        ]
-    };
-
-    var ctx = document.getElementById("tags-chart");
-    window.myBar = new Chart(ctx, {
-        type: 'bar',
-        data: chartData,
-        options: {
-            tooltips: {
-                mode: 'label'
-            },
-            responsive: true,
-            legend: {
-                display: false
-            },
-            scales: {
-                xAxes: [{
-                    stacked: true
-                }],
-                yAxes: [{
-                    stacked: true
-                }]
-            }
-        }
-    });
-
-});  </script>
 </head>
+
 <body>
 
 <nav class="navbar navbar-default navbar-fixed-top" id="navigation">
@@ -112,9 +54,9 @@ $(document).ready(function() {
       <p class="navbar-text navbar-left">Cucumber-JVM Report</p>
       <ul class="nav navbar-nav navbar-right">
                 <li role="presentation" ><a href="feature-overview.html">Features</a></li>
-        <li role="presentation"      class="active" ><a href="tag-overview.html">Tags</a></li>
+        <li role="presentation" ><a href="tag-overview.html">Tags</a></li>
         <li role="presentation" ><a href="step-overview.html">Steps</a></li>
-        <li role="presentation" ><a href="failures-overview.html">Failures</a></li>
+        <li role="presentation"  class="active" ><a href="failures-overview.html">Failures</a></li>
       </ul>
     </div>
   </div>
@@ -135,7 +77,7 @@ $(document).ready(function() {
           <tr class="info">
             <td>cucumberJavaV1</td>
                           <td>1</td>
-                        <td>15 May 2022, 15:54</td>
+                        <td>15 May 2022, 15:52</td>
           </tr>
         </tbody>
       </table>
@@ -146,22 +88,21 @@ $(document).ready(function() {
 <div id="report-lead" class="container-fluid>
   <div class="row">
     <div class="col-md-10 col-md-offset-1">
-      <h2>Tags Statistics</h2>
-              <p>The following graph shows passing and failing statistics for tags</p>
+      <h2>Failures Overview</h2>
+              <p>The following summary displays scenarios that failed.</p>
           </div>
   </div>
 </div>
 
 
-
-<br>
 <div class="container-fluid" id="summary">
   <div class="row">
     <div class="col-md-10 col-md-offset-1">
-              <p>You have no tags in your cucumber report</p>
+              <p>You have no failed scenarios in your Cucumber report</p>
           </div>
   </div>
 </div>
+<br>
 
 <nav class="navbar navbar-default" id="footer">
   <div class="container-fluid">

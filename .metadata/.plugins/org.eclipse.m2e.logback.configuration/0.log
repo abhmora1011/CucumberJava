@@ -6821,3 +6821,11 @@ java.net.URISyntaxException: Illegal character in path at index 22: file:/C:/Use
 2022-05-15 15:36:39,329 [Worker-163: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Abraham Ora\Desktop\CucumberJava\cucumberJavaV1\src\main\resources
 2022-05-15 15:36:39,329 [Worker-163: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
 2022-05-15 15:36:39,329 [Worker-163: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Abraham Ora\Desktop\CucumberJava\cucumberJavaV1\src\test\resources
+2022-05-15 15:52:55,935 [Worker-163: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-05-15 15:52:55,936 [Worker-163: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Abraham Ora\Desktop\CucumberJava\cucumberJavaV1\src\main\resources
+2022-05-15 15:52:55,936 [Worker-163: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-05-15 15:52:55,936 [Worker-163: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Abraham Ora\Desktop\CucumberJava\cucumberJavaV1\src\test\resources
+2022-05-15 15:54:31,735 [Worker-167: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-05-15 15:54:31,735 [Worker-167: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Abraham Ora\Desktop\CucumberJava\cucumberJavaV1\src\main\resources
+2022-05-15 15:54:31,737 [Worker-167: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-05-15 15:54:31,737 [Worker-167: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Abraham Ora\Desktop\CucumberJava\cucumberJavaV1\src\test\resources
