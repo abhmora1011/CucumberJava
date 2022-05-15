@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="TestRunner" project="cucumberJavaV1" tests="1" started="1" failures="1" errors="0" ignored="0">
+  <testsuite name="testRunner.TestRunner" time="10.249">
+    <testsuite name="Filter Search" time="10.249">
+      <testcase name="Search row" classname="Filter Search" time="10.25">
+        <failure>java.lang.AssertionError: expected:&lt;2013&gt; but was:&lt;null&gt;&#13;
+	at org.junit.Assert.fail(Assert.java:89)&#13;
+	at org.junit.Assert.failNotEquals(Assert.java:835)&#13;
+	at org.junit.Assert.assertEquals(Assert.java:120)&#13;
+	at org.junit.Assert.assertEquals(Assert.java:146)&#13;
+	at stepDefinitions.FilterTest.the_product_mapped_on_the_user_should_be_displayed(FilterTest.java:95)&#13;
+	at ✽.the product mapped on the user should be displayed(file:///C:/Users/Abraham%20Ora/Desktop/CucumberJava/cucumberJavaV1/src/test/java/Features/filter.feature:8)&#13;
+&#13;
+</failure>
+      </testcase>
+    </testsuite>
+  </testsuite>
+</testrun>

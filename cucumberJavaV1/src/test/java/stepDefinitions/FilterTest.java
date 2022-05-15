@@ -13,16 +13,16 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-import Utilities.Utility;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
+import testdata.TestData;
 
-public class FilterTest extends Utility{
+public class FilterTest extends TestData {
 
 	WebDriver driver;
-	
+
 	@Given("browser is open")
 	public void open_the_browser() {
 		System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir") + "//driver//chromedriver.exe");
@@ -42,54 +42,58 @@ public class FilterTest extends Utility{
 		Thread.sleep(2000);
 	}
 
-	@And("filter a record")
-	public void filter_record() throws InterruptedException {
-		
-	   WebDriverWait wait = new WebDriverWait(driver,Duration.ofSeconds(10));
-	   WebElement personCol = wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("GridFrow2fltPerson-awed")));
-	   
-	   personCol.sendKeys(name);
-	   personCol.sendKeys(Keys.ENTER);
-	   
-	   //driver.findElement(By.id("GridFrow2fltDate-awed")).click();
-	   
-	   WebElement dateFilter = wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("GridFrow2fltDate-awed")));
-	   dateFilter.click();
-	   
-	   List<WebElement> foodYear = driver.findElements(By.xpath("//*[@id='GridFrow2fltDate-dropmenu']/div[2]/ul/li[2]"));
-	   
-	   for (WebElement yrOption : foodYear) {
-		   
-			if(yrOption.getText().equalsIgnoreCase(year)) {
-				yearFood = yrOption.getText();
+	@And("^filter a record using (.*), (.*) and (.*)$")
+	public void filter_record(String name, String year, String food) throws InterruptedException {
+
+		setYear = year;
+		setFood = food;
+
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+		WebElement personCol = wait
+				.until(ExpectedConditions.visibilityOfElementLocated(By.id("GridFrow2fltPerson-awed")));
+
+		personCol.sendKeys(name);
+		personCol.sendKeys(Keys.ENTER);
+
+		Thread.sleep(2000);
+
+		WebElement dateFilter = wait
+				.until(ExpectedConditions.visibilityOfElementLocated(By.id("GridFrow2fltDate-awed")));
+		dateFilter.click();
+
+		List<WebElement> foodYear = driver.findElements(By.xpath("//*[@id='GridFrow2fltDate-dropmenu']/div[2]/ul/li"));
+
+		for (WebElement yrOption : foodYear) {
+
+			if (yrOption.getText().equalsIgnoreCase(setYear)) {
+				selectedYear = yrOption.getText();
 				yrOption.click();
 				break;
 			}
 		}
-	   
-	   Thread.sleep(2000);
-	   
-	   WebElement foodCol = wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("GridFrow2fltFood-awed")));
-	   foodCol.click();
-	   
-	   List<WebElement> foods = driver.findElements(By.xpath("//*[@id='GridFrow2fltFood-dropmenu']/div[2]/ul/li/div"));
-	   for (WebElement option : foods) {
-		   
-			if(option.getText().equalsIgnoreCase(food)) {
-				foodSelect = option.getText();
+
+		Thread.sleep(2000);
+
+		WebElement foodCol = wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("GridFrow2fltFood-awed")));
+		foodCol.click();
+
+		List<WebElement> foods = driver.findElements(By.xpath("//*[@id='GridFrow2fltFood-dropmenu']/div[2]/ul/li/div"));
+		for (WebElement option : foods) {
+
+			if (option.getText().equalsIgnoreCase(food)) {
+				selectedFood = option.getText();
 				option.click();
 				break;
 			}
 		}
-	   
-	   
+
 	}
 
 	@Then("the product mapped on the user should be displayed")
 	public void the_product_mapped_on_the_user_should_be_displayed() {
-		Assert.assertEquals(food,foodSelect);
-		Assert.assertEquals(year,yearFood);
-		//driver.quit();
+		Assert.assertEquals(setFood, selectedFood);
+		Assert.assertEquals(setYear, selectedYear);
+		driver.quit();
 	}
 
 }

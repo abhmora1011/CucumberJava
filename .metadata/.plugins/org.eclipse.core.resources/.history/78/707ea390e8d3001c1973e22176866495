@@ -1,0 +1,12 @@
+Feature: Filter Search
+
+  Scenario Outline: Search row
+    Given browser is open
+    And user input the url
+    When user is on the page and scroll on the table
+    And filter a record using <name>, <food> and <year>
+    Then the product mapped on the input should be displayed
+
+    Examples: 
+      | name     | food         | year |
+      | Jennifer | French Toast | 2009 |

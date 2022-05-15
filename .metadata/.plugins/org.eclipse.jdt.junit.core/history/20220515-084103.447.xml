@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="TestRunner" project="cucumberJavaV1" tests="1" started="1" failures="0" errors="1" ignored="0">
+  <testsuite name="testRunner.TestRunner" time="7.971">
+    <testsuite name="Filter Search" time="7.971">
+      <testcase name="Search row" classname="Filter Search" time="7.971">
+        <error>io.cucumber.junit.UndefinedStepException: The step 'filter a record using Jennifer, French Toast and 2009' is undefined.
+You can implement this step using the snippet(s) below:
+
+@When("filter a record using Jennifer, French Toast and {int}")
+public void filter_a_record_using_jennifer_french_toast_and(Integer int1) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+&#13;
+&#13;
+</error>
+      </testcase>
+    </testsuite>
+  </testsuite>
+</testrun>
